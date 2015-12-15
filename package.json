@@ -1,0 +1,22 @@
+{
+  "name": "bcu-microhack",
+  "version": "0.0.0",
+  "description": "microhack submission for bcu micro hack 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PandelisZ/BCU-MicroHack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PandelisZ/BCU-MicroHack/issues"
+  },
+  "homepage": "https://github.com/PandelisZ/BCU-MicroHack#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

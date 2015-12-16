@@ -1,6 +1,6 @@
 <div class="quiz-area" ng-show="inProgress">
 	<div ng-show="!quizOver">
-		<h2 id="question">{{question}}</h2>
+		<p id="question">{{question}}</p>
 		<ul id="options">
 			<li ng-repeat="option in options">
 				<label>
@@ -29,6 +29,7 @@
 </div>
 
 <div class="intro" ng-show="!inProgress">
-	<p>Welcome to the QuizApp</p>
-	<button id="startQuiz" ng-click="start()">Start the Quiz</button>
+	<p>Welcome to the Team Extreme career readiness quiz!</p>
+	<p>This quiz will test how career ready you are and you will be given a score at the end!</p>
+	<button id="startQuiz" ng-click="start()">Start the quiz</button>
 </div>

@@ -36,7 +36,7 @@ app.directive('quiz', function(quizFactory) {
 				var ans = $('input[name=answer]:checked').val();
 
 				if(ans == scope.options[scope.answer]) {
-					scope.score++;
+					scope.score = scope.score + 10;
 					scope.correctAns = true;
 				} else {
 					scope.correctAns = false;
@@ -58,29 +58,44 @@ app.directive('quiz', function(quizFactory) {
 app.factory('quizFactory', function() {
 	var questions = [
 		{
-			question: "Do you have a CV?",
-			options: ["Yes", "No", "Maybe", "Whats a cv?"],
-			answer: 2
-		},
-		{
-			question: "Do you like pasta?",
-			options: ["Whos pasta", "Ive never been to italy", "Yes", "Nope"],
+			question: "What are your plans after university?",
+			options: ["Internship", "Graduate Job", "Full Time Job", "Continued Study", "Unsure"],
 			answer: 0
 		},
 		{
-			question: "DO you want a job?",
-			options: ["Yes", "Yes please", "Yes pretty please", "Nah im good"],
-			answer: 3
-		},
-		{
-			question: "What degree are you doing?",
-			options: ["Computing", "Engineering", "Music", "Art"],
+			question: "Have you worked part time during university?",
+			options: ["Yes", "No"],
 			answer: 0
 		},
 		{
-			question: "Do you like azure",
-			options: ["ITs aight", "AWS is better", "Atleast its better than IBM", "Everything is better than IBM"],
-			answer: 1
+			question: "Do you have a cover letter?",
+			options: ["Yes", "No", "What is a cover letter?"],
+			answer: 0
+		},
+		{
+			question: "Have you got a CV?",
+			options: ["Hell yeah", "Yes", "No", "A C what now?"],
+			answer: 0
+		},
+		{
+			question: "Does it include a Personal Statement",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{
+			question: "Does your CV include the following?",
+			options: ["About You", "Skills", "Languages"],
+			answer: 0
+		},
+		{
+			question: "Does it include your Employment/Work Experience?",
+			options: ["Related Skills", "Previous/Current Job", "What were your roles?"],
+			answer: 0
+		},
+		{
+			question: "Does it include hobbies and interests?",
+			options:["Volunteering", "Personal Life", "Social Life"],
+			answer: 0
 		}
 	];
 

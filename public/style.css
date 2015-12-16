@@ -4,6 +4,7 @@ body {
 	font-family: 'Helvetica', 'Arial';
 	background: url('/public/bg.png');
 	-webkit-background-size: cover;
+	background-size: cover;
 	color: white;
 	height: 100%
 }

@@ -12,20 +12,20 @@
 		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
 
 		<div ng-show="!answerMode">
-			<button ng-click="nextQuestion()" class="next-question">Next</button>
-			<span ng-show="correctAns">That is correct!</span>
-			<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
+			<button ng-click="nextQuestion()" class="next-question">Continue</button>
+			<span ng-show="correctAns">That was the best answer!</span>
+			<span ng-show="!correctAns">That is not the optimum answer</span>
 		</div>
 	</div>
 
 	<div ng-show="quizOver">
 		<h2>Quiz is over</h2>
-		<button ng-click="reset()">Play again</button>
+		<p>You got a score of {{score}}</p>
+		<p>Why not share your score on Twitter and challenge your friends</p>
+		<a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://goo.gl/uVcQcX" data-text="I got a score of {{score}} in the career readiness quiz! How career ready are you?" data-size="large" data-hashtags="MicroHack">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</div>
 
-	<div id="score">
-		Score: {{score}}
-	</div>
 </div>
 
 <div class="intro" ng-show="!inProgress">

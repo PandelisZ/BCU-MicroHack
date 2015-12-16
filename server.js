@@ -3,8 +3,16 @@ var app = express();
 //Azure port config
 var portaz = process.env.PORT || 8000;
 
-app.get('/', function(req,res){
-  res.send('Hurah! It works');
+
+app.use('/public', express.static(__dirname + '/public'));
+
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname+'/index.html')
+});
+
+app.get('/template.html', function(req, res){
+  res.sendFile(__dirname+'/template.html')
 });
 
 var server = app.listen(portaz, function(){
